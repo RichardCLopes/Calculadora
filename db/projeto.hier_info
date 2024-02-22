@@ -1,0 +1,237 @@
+|projeto
+x3 => fulladd:stage3.x
+x3 => bcd:stagex.entrada[3]
+x3 => negx.DATAIN
+x2 => fulladd:stage2.x
+x2 => bcd:stagex.entrada[2]
+x1 => fulladd:stage1.x
+x1 => bcd:stagex.entrada[1]
+x0 => fulladd:stage0.x
+x0 => bcd:stagex.entrada[0]
+y3 => z3.IN1
+y3 => bcd:stagey.entrada[3]
+y3 => negy.DATAIN
+y2 => z2.IN1
+y2 => bcd:stagey.entrada[2]
+y1 => z1.IN1
+y1 => bcd:stagey.entrada[1]
+y0 => z0.IN1
+y0 => bcd:stagey.entrada[0]
+somar => aux2.OUTPUTSELECT
+somar => aux2.OUTPUTSELECT
+somar => aux2.OUTPUTSELECT
+somar => aux2.OUTPUTSELECT
+somar => subousoma.IN0
+somar => subousoma.DATAIN
+subtra => aux2.OUTPUTSELECT
+subtra => aux2.OUTPUTSELECT
+subtra => aux2.OUTPUTSELECT
+subtra => aux2.OUTPUTSELECT
+subtra => subousoma.IN1
+salvar => salva[0].CLK
+salvar => salva[1].CLK
+salvar => salva[2].CLK
+salvar => salva[3].CLK
+exibir => aux2.OUTPUTSELECT
+exibir => aux2.OUTPUTSELECT
+exibir => aux2.OUTPUTSELECT
+exibir => aux2.OUTPUTSELECT
+modulo => negresu.OUTPUTSELECT
+negx <= x3.DB_MAX_OUTPUT_PORT_TYPE
+negy <= y3.DB_MAX_OUTPUT_PORT_TYPE
+negresu <= negresu.DB_MAX_OUTPUT_PORT_TYPE
+ledmais <= <VCC>
+saidaX[0] <= bcd:stagex.saida[0]
+saidaX[1] <= bcd:stagex.saida[1]
+saidaX[2] <= bcd:stagex.saida[2]
+saidaX[3] <= bcd:stagex.saida[3]
+saidaX[4] <= bcd:stagex.saida[4]
+saidaX[5] <= bcd:stagex.saida[5]
+saidaX[6] <= bcd:stagex.saida[6]
+saidaY[0] <= bcd:stagey.saida[0]
+saidaY[1] <= bcd:stagey.saida[1]
+saidaY[2] <= bcd:stagey.saida[2]
+saidaY[3] <= bcd:stagey.saida[3]
+saidaY[4] <= bcd:stagey.saida[4]
+saidaY[5] <= bcd:stagey.saida[5]
+saidaY[6] <= bcd:stagey.saida[6]
+saidaE[0] <= stourou.DB_MAX_OUTPUT_PORT_TYPE
+saidaE[1] <= stourou.DB_MAX_OUTPUT_PORT_TYPE
+saidaE[2] <= stourou.DB_MAX_OUTPUT_PORT_TYPE
+saidaE[3] <= stourou.DB_MAX_OUTPUT_PORT_TYPE
+saidaE[4] <= <VCC>
+saidaE[5] <= <VCC>
+saidaE[6] <= stourou.DB_MAX_OUTPUT_PORT_TYPE
+saidaBCD[0] <= bcd:stageresu.saida[0]
+saidaBCD[1] <= bcd:stageresu.saida[1]
+saidaBCD[2] <= bcd:stageresu.saida[2]
+saidaBCD[3] <= bcd:stageresu.saida[3]
+saidaBCD[4] <= bcd:stageresu.saida[4]
+saidaBCD[5] <= bcd:stageresu.saida[5]
+saidaBCD[6] <= bcd:stageresu.saida[6]
+
+
+|projeto|bcd:stagex
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN10
+entrada[0] => Mux4.IN10
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN9
+entrada[1] => Mux4.IN9
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN8
+entrada[2] => Mux4.IN8
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto|bcd:stagey
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN10
+entrada[0] => Mux4.IN10
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN9
+entrada[1] => Mux4.IN9
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN8
+entrada[2] => Mux4.IN8
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto|fulladd:stage0
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto|fulladd:stage1
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto|fulladd:stage2
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto|fulladd:stage3
+Cin => s.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+x => s.IN0
+x => Cout.IN0
+x => Cout.IN1
+y => s.IN1
+y => Cout.IN1
+y => Cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto|bcd:stageresu
+entrada[0] => Mux0.IN19
+entrada[0] => Mux1.IN19
+entrada[0] => Mux2.IN19
+entrada[0] => Mux3.IN10
+entrada[0] => Mux4.IN10
+entrada[0] => Mux5.IN19
+entrada[0] => Mux6.IN19
+entrada[1] => Mux0.IN18
+entrada[1] => Mux1.IN18
+entrada[1] => Mux2.IN18
+entrada[1] => Mux3.IN9
+entrada[1] => Mux4.IN9
+entrada[1] => Mux5.IN18
+entrada[1] => Mux6.IN18
+entrada[2] => Mux0.IN17
+entrada[2] => Mux1.IN17
+entrada[2] => Mux2.IN17
+entrada[2] => Mux3.IN8
+entrada[2] => Mux4.IN8
+entrada[2] => Mux5.IN17
+entrada[2] => Mux6.IN17
+entrada[3] => Mux0.IN16
+entrada[3] => Mux1.IN16
+entrada[3] => Mux2.IN16
+entrada[3] => Mux5.IN16
+entrada[3] => Mux6.IN16
+saida[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
